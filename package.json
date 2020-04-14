@@ -18,6 +18,7 @@
   "homepage": "https://github.com/aaron-G18/Marketplace_DB#readme",
   "dependencies": {
     "inquirer": "^7.1.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "node": "^13.12.0"
   }
 }
