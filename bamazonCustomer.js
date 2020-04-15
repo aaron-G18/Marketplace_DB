@@ -14,11 +14,10 @@ var connection = mysql.createConnection({
 // Connect to the database
 connection.connect(function (err) {
   if (err) throw err;
-
-  //// function(s) to do stufff
   purchasePrompt();
 });
 
+// Function for "purchasing" items.
 function purchasePrompt() {
   // query the database for all items.
   connection.query("SELECT * FROM products", function (err, results) {
