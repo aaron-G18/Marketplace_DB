@@ -1,6 +1,6 @@
 # Marketplace_DB
 
-This is an app that runs in node.js. It is a mock marketplace that utilizes a SQL database. It takes in shell commands for "purchases" from available stock, queries a database, and either gives the "customer" a completed sale and total of their "purchase," or notifies them that there is not enough inventory if they try to purchase more of an item than there is stock.
+This is an app that runs in node.js. It is a mock marketplace that utilizes a SQL database. It takes in shell commands for purchases from available stock, queries a database, and either gives the customer a completed sale and total of their purchase, or notifies them that there is not enough inventory if they try to purchase more of an item than there is stock.
 
 **You will need to creat the database that this app interacts with. The `bamazon_seeds.sql` file has the schema commands for MySQL Workbench to create and populate the database used for this app. If you copy and paste the entire text into MySQL Workbench and run it, it will create the database.**
 
@@ -10,8 +10,10 @@ This is an app that runs in node.js. It is a mock marketplace that utilizes a SQ
 
 - Simply type `node bamazonCustomer.js` in terminal and run it.
 - The app will then query the database and give you a table listing all the items available for sale.
-- It will prompt you to make a selection of what item you want to purchase. _You can arrow up and down through a list of the item's IDs to select one._
-- Then it will give you a prompt asking the quantity you would like to purchase. _Enter a number and hit enter._
+- It will prompt you to make a selection of what item you want to purchase.
+  _(You can arrow up and down through a list of the item's IDs to select one)_
+- Then it will give you a prompt asking the quantity you would like to purchase.
+  _(Enter a number and hit enter)_
 - The app will check the database inventory and make sure there is enough to complete the order.
 
 * If there is enough inventory to complete the order, you will get a message saying "Your order is complete" and it will give you your order total.
@@ -20,4 +22,4 @@ This is an app that runs in node.js. It is a mock marketplace that utilizes a SQ
 Here is a link to a video of the app in use:
 
 [bamazonCustomer.js in action](https://github.com/aaron-G18/Marketplace_DB/blob/master/vid/bamazonCustomer%20CLI%20working.mov)
-_click on "View raw" to get the video._
+_(on the linked page, click on "View raw" to get the video.)_
