@@ -12,7 +12,7 @@ This is an app that runs in node.js. It is a mock marketplace that utilizes a SQ
 
 ---
 
-- Simply type `node bamazonCustomer.js` in terminal and run it.
+- Simply type `node bamazonCustomer.js` in terminal (in the same directory as the bamazon.js file) and run it.
 - The app will then query the database and give you a table listing all the items available for sale.
 - It will prompt you to make a selection of what item you want to purchase.
   _(You can arrow up and down through a list of the item's IDs to select one)_
