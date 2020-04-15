@@ -1,5 +1,6 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
+var chalk = require("chalk");
 
 // Create the connection information for the SQL database.
 var connection = mysql.createConnection({
@@ -74,16 +75,18 @@ function purchasePrompt() {
             function (error) {
               if (error) throw err;
               var custTotal = parseInt(answer.quantity) * selectedProduct.price;
-              console.log("**");
-              console.log("****");
+              console.log(chalk.green("**"));
+              console.log(chalk.green("****"));
               console.log(
-                "Your order is complete. Your total was: $",
-                custTotal
+                chalk.green(
+                  "Your order is complete. Your total was: $",
+                  custTotal
+                )
               );
-              console.log("****");
-              console.log("**");
-
-              //purchasePrompt();
+              console.log(chalk.green("****"));
+              console.log(chalk.green("**"));
+              console.log(chalk.green("*"));
+              console.log(chalk.green("*"));
             }
           );
           // console.log(query.sql);
@@ -91,15 +94,17 @@ function purchasePrompt() {
           purchasePrompt();
         } else {
           // if there is not enough quantity to complete the order.
-          console.log("**");
-          console.log("****");
+          console.log(chalk.keyword("orange")("**"));
+          console.log(chalk.keyword("orange")("****"));
           console.log(
-            "Sorry, we don't have enough available stock to complete your order. This transaction has been canceled."
+            chalk.keyword("orange")(
+              "Sorry, we don't have enough available stock to complete your order. This transaction has been canceled."
+            )
           );
-          console.log("****");
-          console.log("Please make a new purchase.");
-          console.log("****");
-          console.log("**");
+          console.log(chalk.keyword("orange")("****"));
+          console.log(chalk.keyword("orange")("Please make a new purchase."));
+          console.log(chalk.keyword("orange")("****"));
+          console.log(chalk.keyword("orange")("**"));
           purchasePrompt();
         }
       });
